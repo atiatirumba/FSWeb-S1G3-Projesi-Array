@@ -40,8 +40,13 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(arr){
+  const kopyaArr =[];
+  for(let i=0; i< arr.length; i++){
+    kopyaArr.push(arr[i]);
+  }
+  return kopyaArr;
+   ;
 }
 
 
@@ -56,9 +61,13 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
-}
+function dizi25Cesitmi(arr){
+  
+    return arr.length == 25;
+  
+  }
+
+
 
 
 /* Görev 3:
@@ -74,9 +83,14 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(arr, yeniTat){
+  const newArr =[...arr];
+  
+  newArr.unshift(yeniTat); {
+    return newArr;
+  }
 }
+
 
 
 /* Cörev 4:
@@ -92,8 +106,12 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(arr){
+ const cloneArr =[...arr];
+
+  cloneArr.pop();{
+    return cloneArr;
+  }
 }
 
 
@@ -108,9 +126,10 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(arr,index){
+  return arr[index];
 }
+
 
 
 /* Görev 6:
@@ -128,9 +147,15 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(arr, tat){
+  const cloneArr = [...arr];
+  const index = arr.indexOf(tat);
+  if (index != -1){
+   cloneArr.splice(index,1);
+  }
+  return cloneArr;
 }
+
 
 
 /* Görev 7:
@@ -154,8 +179,15 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(arr, searchText){
+  const yeniDizi= [];
+  for (let i =0; i < arr.length; i++){
+    const İndex = arr[i].indexOf(searchText);
+    if (İndex != -1){
+      yeniDizi.push(arr[i]);
+    }
+  }
+  return yeniDizi;
 }
 
 
